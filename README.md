@@ -362,4 +362,5 @@ Is tailwind capitalizing on the flaws of frameworks that didn't consider styling
 
 Speculation on my part here, but i'm gonna say yes. While i do tip my hat 🎩 🧐 to their criminal genius, when i look at devs enamoured and frothing at the mouth claiming Tailwind is the best...
 
-![Malcolm, Jurassic Park video](https://www.youtube.com/watch?v=LZ64ZdNDSFA)
+https://user-images.githubusercontent.com/45786628/216472537-c4c96d5c-04a9-4138-8983-80f19bcd5b61.mp4
+
