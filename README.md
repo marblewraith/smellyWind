@@ -330,7 +330,7 @@ Trade off isn't worth it IMO.
 
 > [7 (paraphrased)] Utility classes are WET / can be extremley verbose. Doesn't matter, editor features will compensate.
 
-***Sorry what?!*** Since when did we lose our pride as devs? One liners aren't a thing anymore?... OK i'm being hyperbolic 😁
+***Sorry what?!*** Since when did we lose our pride as devs? One liners aren't a thing anymore? OK i'm being hyperbolic 😁
 
 But seriously, Being able to write something that presents as short, concise, and easy to grok in the fewest amount of chars, that's not important?
 
