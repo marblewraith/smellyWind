@@ -141,23 +141,23 @@ background: radial-gradient(, white 1px, var(--c1) 3%, var(--c2) 60%, var(--c3) 
 
 **1. Contiguity** has been mostly resolved, hyphenated property-values / descriptive utility class syntax, it's all under 1 attribute and grouped appropriately, thus the DevX *when writing* Tailwind is an improvement... In favor of making everything else worse.
 
-![Jeff Goldblum meme](MalcolmSmirk.png)
+![MalcolmSmirk](https://user-images.githubusercontent.com/45786628/216475991-55a33c55-86bc-4fe7-8623-4b9d34dc8b09.png)
 
-When *reading* Tailwind, talking about efficiency in trying grok what it's doing, and the opt-out early principle i mentioned previously, neither of them fair well as you can see with this... all that orange, 71 classes just to style a checkbox:
+When *reading* Tailwind, talking about efficiency in trying grok what it's doing, and the opt-out early principle i mentioned previously, neither of them fair well as you can see with this...
 
 ![Tailwind class hell image1](https://www.aleksandrhovhannisyan.com/assets/images/SlYrQIW6RE-1261.webp)
 
-Full credit for this screenshot to [Aleksandr Hovhannisyan's article](https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-Tailwind-css/), for further reading of Tailwind's shortcomings.
+... all that orange, 71 classes just to style a checkbox. Full credit for this screenshot to [Aleksandr Hovhannisyan's article](https://www.aleksandrhovhannisyan.com/blog/why-i-dont-like-Tailwind-css/), for further reading of Tailwind's shortcomings.
 
 And for those saying it's not a realistic use case, as stated in that article, that screengrab was "taken from netlify's dashboard", and is entirely consistent with tailwinds "composable" philosophy. Another one:
 
-![Tailwind class hell image2](https://twitter.com/hi__mayank/status/1584261503670448128?s=20&t=-vpELfOHU8Hysu529vaW7g)
+https://twitter.com/hi__mayank/status/1584261503670448128?s=20&t=-vpELfOHU8Hysu529vaW7g
 
 It's so bad to the point people have made [editor plugins](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold) to hide the "utility classes that often disfigure code visual structure".
 
 **2. Complexity** has been increased. Tailwind is effectively a "custom grammar". That grammar must be defined so that LSPs and linters understand it. Not to mention you also have to make sure it works flawlessly embedded inside other languages / frameworks, and they're all updated in sync with Tailwind itself. This is all added complexity, dependencies, and potential for failure in the dev workflow. Is this a problem? Well...
 
-<!-- https://twitter.com/gyfchong/status/1587038177352523777?s=20&t=ziQLIKxmXNYPckuWY2bg1g -->
+https://twitter.com/gyfchong/status/1587038177352523777?s=20&t=ziQLIKxmXNYPckuWY2bg1g
 
 I suspect this would be quite frustrating when trying migrate code from one project to another. It's true Tailwind is not solely responsible for this, but they do hold a share of blame as the proponent of their product / why we should use it over anything else.
 
@@ -229,7 +229,7 @@ We could further get into ripping apart the philosophy behind Tailwind and the m
 
 Alright, with this understanding so far. Let's take a look at the claims Tailwind uses to justify its existence. Reading through the "Core Concepts" sidebar starting from [Utility-First Fundamentals](https://Tailwindcss.com/docs/utility-first) (v3.2.1 of docs):
 
-![Jeff Goldblum, Sell it!](https://media.giphy.com/media/5xtDarGhv1dqDju4QgM/giphy.gif)
+![wannaSell](https://user-images.githubusercontent.com/45786628/216475142-e2418ab0-ce7f-4684-a874-ab80a40d0b83.gif)
 
 ### Alleged Benefits
 
@@ -247,7 +247,7 @@ But they're still saying: "no no, naming is hard and takes alot of effort?"... H
 
 Not to mention, while you may not be "wasting energy inventing class names", instead you'll be wasting energy learning the pre-named class mnemonics and architecture of Tailwind.
 
-💩 score = 0 : 1
+🐂💩 score = 0 : 1
 
 ---
 
@@ -261,7 +261,7 @@ Furthermore even if there were duplications in the final output, to borrow an ar
 
 Also in terms of load performance for prod, it turns out some duplication is fine. As demonstrated by [Harry Roberts: Extends vs Mixins](https://csswizardry.com/2016/02/mixins-better-for-performance/). In SCSS `mixins` produce more classes overall than `extends` does. Yet by the time compression (gzip / brotli) gets done with it, notice the filesize?
 
- 💩 score = 0 : 2
+🐂💩 score = 0 : 2
 
 ---
 
@@ -273,7 +273,7 @@ CSS in dev isn't necessarily global, [CSS modules are a thing](https://github.co
 
 Furthermore even if the component framework does *not* support locally scoped styles, there are better CSS-in-JS solutions mentioned before: [Vanilla Extract](https://vanilla-extract.style/) that don't require pre-named class mnemonics or conventions.
 
-💩 score = 0 : 3
+🐂💩 score = 0 : 3
 
 ### Why not just use inline styles?
 
@@ -287,7 +287,7 @@ Credit where it's due, out of all the CSS frameworks i've seen, Tailwind's means
 
 But it's also worth bearing in mind, this is a double edged sword. Because ease of overriding also means it becomes easy for devs (particularly inexperienced ones) to stray from design systems and do anything they want.
 
-💩 score = 0.5 : 4
+🐂💩 score = 0.5 : 4
 
 ---
 
@@ -299,9 +299,11 @@ If you have those features at your disposal, you're free to define styles inside
 
 Also I don't consider media queries something that needs to be dynamically composed anyway? Using proper responsive / fluid design patterns means the number of media queries should be kept to a minimum in the first place. Can't speak for everyone, but by doing this i find i'm consistently using *all* queries that have been defined anyway, without a need to tweak any of them.
 
-💩 score = 1 : 5
+🐂💩 score = 1 : 5
 
 ### Maintainability concerns
+
+[Extracting components and partials](https://tailwindcss.com/docs/reusing-styles#extracting-components-and-partials)
 
 > [6 (paraphrased)] Utility classes are WET / can be extremley verbose. You can just use component frameworks to make it DRY.
 
@@ -324,9 +326,11 @@ That is, we've gone from encapsulating styling via conceptual abstraction, to ab
 
 Trade off isn't worth it IMO.
 
-💩 score = 1 : 6
+🐂💩 score = 1 : 6
 
 ---
+
+[Using editor and language features](https://tailwindcss.com/docs/reusing-styles#using-editor-and-language-features)
 
 > [7 (paraphrased)] Utility classes are WET / can be extremley verbose. Doesn't matter, editor features will compensate.
 
@@ -336,25 +340,25 @@ But seriously, Being able to write something that presents as short, concise, an
 
 Someone will have to *read* that code at some point! Be polite to your fellow devs and/or yourself in 6 months.
 
-Also maybe it's just me, but [the example they use](https://Tailwindcss.com/docs/reusing-styles#using-editor-and-language-features) the code sample is a bit too "mint". The places that require multiple cursors are all right next to each other, in reality using multicursors are way more janky than that, not so quick and simple.
+Not to mention relying on editor features instead of being able to write 
 
-💩 score = 1 : 7
+Also maybe it's just me, but the example they use, the code sample is a bit too "mint". The places that require multiple cursors are all right next to each other, in reality using multicursors are way more janky than that, not so quick and simple, and even find/replace comes with its own caveats.
+
+🐂💩 score = 1 : 7
 
 ## Conclusion
 
 Does tailwinds claims hold up? No, they're over 80% dino-shit.
 
-![shit pile](https://media.giphy.com/media/bqaqrfVlO2TGiHdi0f/giphy.gif)
+![jurassic park image](https://user-images.githubusercontent.com/45786628/216474017-769141a2-9581-4637-81e2-b9e76f32719a.gif)
 
 Is it worth using Tailwind? ([See TL;DR Acceptable Tailwind Use Case?](#tldr-acceptable-tailwind-use-case)).
 
-Is it worth prioritizing learning Tailwind?
+Is it worth prioritizing learning Tailwind? Not unless you're working on something that has it as a dependency already. It has a limited scenario's where it's useful (Angluar / React) and for those cases there are better alternatives (Vanilla Extract, eccstatic, etc). Furthermore it's not a very transferrable skill, that is, not every project's gonna have tailwind.
 
-In my opinion, not unless you're working on something that has it as a dependency already. It has a limited scenario's where it's useful (Angluar / React) and for those cases there are better alternatives (Vanilla Extract, eccstatic, etc). Furthermore it's not a very transferrable skill, that is, not every project's gonna have tailwind.
+We spent all this time getting to the point of componentizing websites, only to tie another 3rd party dependency (tailwind) to it so the code can't work natively if you move it to another project without tailwind? I thought the whole point of components was to DRY things out, what's the point if you're going to make things WET over multiple projects? 😑
 
-We spent all this time getting to the point of componentizing websites, only to tie another 3rd party dependency (tailwind) to it that ensures it can't work if you move it to another project without that dependency?
-
-Note: I'm speaking to new devs with this next paragraph, experienced devs you've heard / seen this.
+Note: I'm speaking to new devs with this next paragraph, experienced devs you've probably heard / seen this.
 
 Short of JSX / Tailwind being adopted by the W3C itself and becoming a web standard (unlikely), learning and using it now is akin to implementing tech debt. Short term DevX gains, for long term pain when it comes to support / migration (that will inevitably need to happen), just as it did with Jquery, Bootstrap, momentJS, Grunt, Gulp, Webpack or whatever other dated libs / tools / frameworks you can think of.
 
@@ -363,4 +367,5 @@ Is tailwind capitalizing on the flaws of frameworks that didn't consider styling
 Speculation on my part here, but i'm gonna say yes. While i do tip my hat 🎩 🧐 to their criminal genius, when i look at devs enamoured and frothing at the mouth claiming Tailwind is the best...
 
 https://user-images.githubusercontent.com/45786628/216472537-c4c96d5c-04a9-4138-8983-80f19bcd5b61.mp4
+
 
