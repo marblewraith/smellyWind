@@ -243,7 +243,7 @@ But they're still saying: "no no, naming is hard and takes alot of effort?"... H
 
 Not to mention, while you may not be "wasting energy inventing class names", instead you'll be wasting energy learning the pre-named class mnemonics and architecture of Tailwind.
 
-🐂💩 score = 0 : 1
+🦕💩 score = 0 : 1
 
 ---
 
@@ -257,7 +257,7 @@ Furthermore even if there were duplications in the final output, to borrow an ar
 
 Also in terms of load performance for prod, it turns out some duplication is fine. As demonstrated by [Harry Roberts: Extends vs Mixins](https://csswizardry.com/2016/02/mixins-better-for-performance/). In SCSS `mixins` produce more classes overall than `extends` does. Yet by the time compression (gzip / brotli) gets done with it, notice the filesize?
 
-🐂💩 score = 0 : 2
+🦕💩 score = 0 : 2
 
 ---
 
@@ -269,7 +269,7 @@ CSS in dev isn't necessarily global, [CSS modules are a thing](https://github.co
 
 Furthermore even if the component framework does *not* support locally scoped styles, there are better CSS-in-JS solutions mentioned before: [Vanilla Extract](https://vanilla-extract.style/) that don't require pre-named class mnemonics or conventions.
 
-🐂💩 score = 0 : 3
+🦕💩 score = 0 : 3
 
 ### Why not just use inline styles?
 
@@ -283,7 +283,7 @@ Credit where it's due, out of all the CSS frameworks i've seen, Tailwind's means
 
 But it's also worth bearing in mind, this is a double edged sword. Because ease of overriding also means it becomes easy for devs (particularly inexperienced ones) to stray from design systems and do anything they want.
 
-🐂💩 score = 0.5 : 4
+🦕💩 score = 0.5 : 4
 
 ---
 
@@ -295,7 +295,7 @@ If you have those features at your disposal, you're free to define styles inside
 
 Also I don't consider media queries something that needs to be dynamically composed anyway? Using proper responsive / fluid design patterns means the number of media queries should be kept to a minimum in the first place. Can't speak for everyone, but by doing this i find i'm consistently using *all* queries that have been defined anyway, without a need to tweak any of them.
 
-🐂💩 score = 1 : 5
+🦕💩 score = 1 : 5
 
 ### Maintainability concerns
 
@@ -322,7 +322,7 @@ That is, we've gone from encapsulating styling via conceptual abstraction, to ab
 
 Trade off isn't worth it IMO.
 
-🐂💩 score = 1 : 6
+🦕💩 score = 1 : 6
 
 ---
 
@@ -340,7 +340,7 @@ Not to mention relying on editor features instead of being able to write
 
 Also maybe it's just me, but the example they use, the code sample is a bit too "mint". The places that require multiple cursors are all right next to each other, in reality using multicursors are way more janky than that, not so quick and simple, and even find/replace comes with its own caveats.
 
-🐂💩 score = 1 : 7
+🦕💩 score = 1 : 7
 
 ## Conclusion
 
