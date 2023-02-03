@@ -105,7 +105,7 @@ You could parameterize some more in the style definitions, like using the longha
 **3. Convolution**: It's also not great because it lacks descriptive detail, for example if you didn't need any unique JS hook and `id` was removed like this:
 
 ```HTML
-<div class="shape color position" style="--rad:50%; --w:100px; --h:100px; --c1:pink; --c2:red; --c3:darkred; --t:50%; --l:50%"></div>
+<div class="shape color position" style="--rad:50%; --w:100px; --h:100px; --c1:pink; --c2:red; --c3:maroon; --t:50%; --l:50%"></div>
 ```
 
 This is *bad code* and developer etiquette. Why? There is not way to tell *what* shape the div is producing without seeing the output (in browser), and/or being forced to read significant amounts of syntax. Perhaps the above is still somewhat agreeable to you? But this is only a simple example, imagine *even more* classes and custom properties... it quickly faces issues of scale.
@@ -126,18 +126,14 @@ The common way (`<div class="sphere red"></div>`) tells you *exactly* what the d
 
 > A utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center` and `rotate-90` that can be composed to build any design, directly in your markup.
 
-The "can be composed", is synonymous with the composition in DSC we just went through. That is, Tailwind is trying to be a better version of it. Time to compare and contrast.
+The "can be composed", is synonymous with the composition in DSC we just went through. That is, Tailwind is trying to be a better version of it. Time to compare and contrast... and whoops. Tailwind has no native classes to handle radial gradients. No problem i guess we can [make some](https://blog.logrocket.com/guide-adding-gradients-tailwind-css/#adding-radial-background-gradients), but spoiler, this is a blight on colocation.
 
 ```HTML
 <!-- DSC -->
-<div class="shape color position" style="--rad:50%; --w:100px; --h:100px; --c1:pink; --c2:red; --c3:darkred; --t:50%; --l:50%"></div>
+<div class="shape color position" style="--rad:50%; --w:100px; --h:100px; --c1:pink; --c2:red; --c3:maroon; --t:50%; --l:50%"></div>
 <!-- Tailwind -->
-<div class="rounded-full w-100px h-100px absolute top-1/2 left-1/2">
+<div class="rounded-full w-100px h-100px absolute top-1/2 left-1/2 bg-gradient-radial from-rose-100 via-rose-700 to-maroon-800">
 ```
-
-'g-rad': 'radial-gradient(circle at 65% 15%, var(--tw-gradient-stops))'
-
-background: radial-gradient(, white 1px, var(--c1) 3%, var(--c2) 60%, var(--c3) 100%);
 
 **1. Contiguity** has been mostly resolved, hyphenated property-values / descriptive utility class syntax, it's all under 1 attribute and grouped appropriately, thus the DevX *when writing* Tailwind is an improvement... In favor of making everything else worse.
 
@@ -153,7 +149,7 @@ And for those saying it's not a realistic use case, as stated in that article, t
 
 https://twitter.com/hi__mayank/status/1584261503670448128?s=20&t=-vpELfOHU8Hysu529vaW7g
 
-It's so bad to the point people have made [editor plugins](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold) to hide the "utility classes that often disfigure code visual structure".
+It's so bad to the point people have made [editor plugins](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold) to hide the, quote: "utility classes that often disfigure code visual structure".
 
 **2. Complexity** has been increased. Tailwind is effectively a "custom grammar". That grammar must be defined so that LSPs and linters understand it. Not to mention you also have to make sure it works flawlessly embedded inside other languages / frameworks, and they're all updated in sync with Tailwind itself. This is all added complexity, dependencies, and potential for failure in the dev workflow. Is this a problem? Well...
 
@@ -227,7 +223,7 @@ We could further get into ripping apart the philosophy behind Tailwind and the m
 
 ## Tailwind Marketing
 
-Alright, with this understanding so far. Let's take a look at the claims Tailwind uses to justify its existence. Reading through the "Core Concepts" sidebar starting from [Utility-First Fundamentals](https://Tailwindcss.com/docs/utility-first) (v3.2.1 of docs):
+Alright, with this understanding so far. Let's take a look at the claims Tailwind uses to justify its existence. Reading through the "Core Concepts" sidebar starting from [Utility-First Fundamentals](https://Tailwindcss.com/docs/utility-first) (v3.2.1 of docs at time of writing):
 
 ![wannaSell](https://user-images.githubusercontent.com/45786628/216475142-e2418ab0-ce7f-4684-a874-ab80a40d0b83.gif)
 
