@@ -336,7 +336,7 @@ But seriously, Being able to write something that presents as short, concise, an
 
 Someone will have to *read* that code at some point! Be polite to your fellow devs and/or yourself in 6 months.
 
-Not to mention relying on editor features instead of being able to write 
+Not to mention relying on editor features as a crutch, instead of writing reasonably DRY code from the outset to make it easy to edit and refactor... Seems a bit ends justifying the means.
 
 Also maybe it's just me, but the example they use, the code sample is a bit too "mint". The places that require multiple cursors are all right next to each other, in reality using multicursors are way more janky than that, not so quick and simple, and even find/replace comes with its own caveats.
 
