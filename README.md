@@ -263,7 +263,7 @@ Also in terms of load performance for prod, it turns out some duplication is fin
 
 > [3] Making changes feels safer. CSS is global and you never know what you're breaking when you make a change. Classes in your HTML are local, so you can change them without worrying about something else breaking.
 
-False... do i actually have to explain how the cascade works? If you remove specificity (for the sake of brevity) CSS still has scoppe depending on *where* it's defined. Also no recognition or distinction made between CSS in dev vs CSS in prod?
+False... do i actually have to explain how the cascade works? If you remove specificity (for the sake of brevity) CSS still has scope depending on *where* it's defined. Also no recognition or distinction made between CSS in dev vs CSS in prod?
 
 CSS in dev isn't necessarily global, [CSS modules are a thing](https://github.com/css-modules/css-modules) and locally scoped css in component frameworks has been possible for some time now ([Vue example](https://vuejs.org/api/sfc-css-features.html#scoped-css)).
 
