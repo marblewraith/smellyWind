@@ -147,13 +147,13 @@ When *reading* Tailwind, talking about efficiency in trying grok what it's doing
 
 And for those saying it's not a realistic use case, as stated in that article, that screengrab was "taken from netlify's dashboard", and is entirely consistent with tailwinds "composable" philosophy. Another one:
 
-https://twitter.com/hi__mayank/status/1584261503670448128?s=20&t=-vpELfOHU8Hysu529vaW7g
+https://twitter.com/hi__mayank/status/1584261503670448128
 
 It's so bad to the point people have made [editor plugins](https://marketplace.visualstudio.com/items?itemName=moalamri.inline-fold) to hide the, quote: "utility classes that often disfigure code visual structure".
 
 **2. Complexity** has been increased. Tailwind is effectively a "custom grammar". That grammar must be defined so that LSPs and linters understand it. Not to mention you also have to make sure it works flawlessly embedded inside other languages / frameworks, and they're all updated in sync with Tailwind itself. This is all added complexity, dependencies, and potential for failure in the dev workflow. Is this a problem? Well...
 
-https://twitter.com/gyfchong/status/1587038177352523777?s=20&t=ziQLIKxmXNYPckuWY2bg1g
+https://twitter.com/gyfchong/status/1587038177352523777
 
 I suspect this would be quite frustrating when trying migrate code from one project to another. It's true Tailwind is not solely responsible for this, but they do hold a share of blame as the proponent of their product / why we should use it over anything else.
 
