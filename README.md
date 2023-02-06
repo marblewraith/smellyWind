@@ -179,7 +179,7 @@ Well you could use inline styles inside your jsx/tsx, but implementing CSS-in-JS
 
 And so you got 2 options at this point:
 
-- Write CSS-in-JS for source files, but you need some kind of build step that extracts styles from source into an external file, and placeholds where they were with refs (class / id attributes). There are a few libs that do this, however they too can face [issues with compatibility](https://github.com/withastro/astro/issues/4432) in embedded formats and so my choice would be [Vanilla Extract](https://vanilla-extract.style/), with [eccstatic](https://www.ecsstatic.dev/) being a close second.
+- Write CSS-in-JS for source files, but you need some kind of build step that extracts styles from source into an external file, and placeholds where they were with refs (class / id attributes). There are a few libs that do this, however they too can face [issues with compatibility](https://github.com/withastro/astro/issues/4432) in embedded formats and so my choice would be [Vanilla Extract](https://vanilla-extract.style/), with [ecsstatic](https://www.ecsstatic.dev/) being a close second.
 
 - Structure the component as you would a typical HTML file, that is, separate the style definitions into an external CSS file and use class refs to point to them, which are parsed independently in the browser, and applied once the component is rendered. CSS modules can be used with great effect here.
 
@@ -350,7 +350,7 @@ Does tailwinds claims hold up? No, they're over 80% dino-shit.
 
 Is it worth using Tailwind? ([See TL;DR Acceptable Tailwind Use Case?](#tldr-acceptable-tailwind-use-case)).
 
-Is it worth prioritizing learning Tailwind? Not unless you're working on something that has it as a dependency already. It has a limited scenario's where it's useful (Angluar / React) and for those cases there are better alternatives (Vanilla Extract, eccstatic, etc). Furthermore it's not a very transferrable skill, that is, not every project's gonna have tailwind.
+Is it worth prioritizing learning Tailwind? Not unless you're working on something that has it as a dependency already. It has a limited scenario's where it's useful (Angluar / React) and for those cases there are better alternatives (Vanilla Extract, ecsstatic, etc). Furthermore it's not a very transferrable skill, that is, not every project's gonna have tailwind.
 
 We spent all this time getting to the point of componentizing websites, only to tie another 3rd party dependency (tailwind) to it so the code can't work natively if you move it to another project without tailwind? I thought the whole point of components was to DRY things out, what's the point if you're going to make things WET over multiple projects? 😑
 
