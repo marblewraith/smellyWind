@@ -20,9 +20,9 @@ I am not a proponent of Tailwind. Quite the reverse, and have been for a long ti
 
 > *"Is there a TL;DR for acceptable ways to use Tailwind?"*
 
-*Yes.*
+***Yes.***
 
-1. In my opinion, Tailwind is a hack for component frameworks that *do not* have single file component (SFC) formats available (React, Angular, solidJS, etc).
+1. If you want to colocate your styles inside the components of a framework that does *not* have a single file component (SFC) format available (React, Angular, solidJS, etc). Tailwind is one of the more hacky solutions that facilitates this.
 
 2. The other use case being, if you need to prototype something, but know absolutely nothing about design, and need some prebuilt design system, that already has curated colors, etc.
 
