@@ -22,7 +22,7 @@ I am not a proponent of Tailwind. Quite the reverse, and have been for a long ti
 
 *Yes.*
 
-1. In my opinion, Tailwind is a hack for component frameworks that *do not* have single file component (SFC) formats available (React, Angular, etc).
+1. In my opinion, Tailwind is a hack for component frameworks that *do not* have single file component (SFC) formats available (React, Angular, solidJS, etc).
 
 2. The other use case being, if you need to prototype something, but know absolutely nothing about design, and need some prebuilt design system, that already has curated colors, etc.
 
