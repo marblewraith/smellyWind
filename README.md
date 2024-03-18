@@ -1,5 +1,19 @@
 # Tailwind: Over Hyped and Oddly focused
 
+## UPDATE 2024/03/19
+
+It's been over a year since smellyWind was published. In that time:
+
+- [styleX](https://github.com/facebook/stylex) from meta was published
+- The [material UI team is creating their own zero-runtime CSS-in-JS lib](https://twitter.com/olivtassinari/status/1765719897152127315) retaining the name [Pigment CSS](https://github.com/mui/material-ui/tree/master/packages/pigment-css-react)
+
+Neither of these solutions resemble anything close to Tailwind or its "composible" philosophy. They are both zero-runtime CSS-in-JS libs that are closer in behaviour and syntax to the others that were already mentioned in smellyWind:
+
+- [Vanilla Extract](https://vanilla-extract.style/)
+- [ecsstatic](https://www.ecsstatic.dev/)
+
+## Table of Contents
+
 - [TL;DR Acceptable Tailwind Use Case?](#tldr-acceptable-tailwind-use-case)
 - [Styling](#styling)
   - [Common](#common)
@@ -281,7 +295,7 @@ The only difference being Tailwind added more dynamism for processing. But it's 
 
 Credit where it's due, out of all the CSS frameworks i've seen, Tailwind's means of [using "arbitrary properties"](https://Tailwindcss.com/docs/adding-custom-styles#arbitrary-properties), that is the dynamism for processing above for overrides, is the best i've seen in terms of DevX.
 
-But it's also worth bearing in mind, this is a double edged sword. Because ease of overriding also means it becomes easy for devs (particularly inexperienced ones) to stray from design systems and do anything they want.
+For this i'll grant half a point because it's also worth bearing in mind, this is a double edged sword. Ease of overriding also means it becomes easy for devs (particularly inexperienced ones) to stray from design systems and do anything they want.
 
 🦕💩 score = 0.5 : 4
 
@@ -289,9 +303,9 @@ But it's also worth bearing in mind, this is a double edged sword. Because ease 
 
 > [5] Responsive design. You can't use media queries in inline styles, but you can use Tailwind's responsive utilities to build fully responsive interfaces easily.
 
-True. But again this is only relevant for frameworks without SFC formats, or if you're not using something like [Vanilla Extract](https://vanilla-extract.style/).
+True. But again this is only relevant for frameworks without SFC formats and/or if you're not using one of the CSS-in-JS libs mentioned.
 
-If you have those features at your disposal, you're free to define styles inside the component using native syntax, that includes media queries. You can even mimic similar behaviour in native HTML if you're using [progressive rendering techniques](https://csswizardry.com/2018/11/css-and-network-performance/) by specifying the media attribute in the link tag used in the body. Tho' the markup syntax gets "tailwind ugly", very polluted.
+So i guess it's another half point? Because if you have those features at your disposal, you're free to define styles inside the component using native syntax, that includes media queries. You can even mimic similar behaviour in native HTML if you're using [progressive rendering techniques](https://csswizardry.com/2018/11/css-and-network-performance/) by specifying the media attribute in the link tag used in the body. Tho' the markup syntax gets "tailwind ugly", very polluted.
 
 Also I don't consider media queries something that needs to be dynamically composed anyway? Using proper responsive / fluid design patterns means the number of media queries should be kept to a minimum in the first place. Can't speak for everyone, but by doing this i find i'm consistently using *all* queries that have been defined anyway, without a need to tweak any of them.
 
