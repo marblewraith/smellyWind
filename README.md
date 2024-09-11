@@ -1,5 +1,9 @@
 # Tailwind: Over Hyped and Oddly focused
 
+## UPDATE 2024/09/12
+
+I just found [pandaCSS](https://panda-css.com/) and i think it might be my new favorite!
+
 ## UPDATE 2024/03/19
 
 It's been over a year since smellyWind was published. In that time:
