@@ -2,7 +2,8 @@
 
 ## UPDATE 2024/09/12
 
-I just found [pandaCSS](https://panda-css.com/) and i think it might be my new favorite!
+I was just made aware of [pandaCSS](https://panda-css.com/). It seems to be in the same vein as tailwind, only without as much of a baked in design system.
+Tried using it, it's not for me.
 
 ## UPDATE 2024/03/19
 
